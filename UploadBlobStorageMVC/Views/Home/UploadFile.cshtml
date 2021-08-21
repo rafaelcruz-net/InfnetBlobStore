@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Subir arquivos para o Blob Storage</h1>
+    
+    @using (Html.BeginForm("UploadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label for="flInput">Selecione o arquivo</label>
+        <input type="file" id="flInput" name="flInput" multiple />
+        <input type="submit" value="Fazer Upload" />
+    }
+
+</div>
